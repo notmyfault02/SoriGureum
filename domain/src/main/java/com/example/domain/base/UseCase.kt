@@ -1,4 +1,4 @@
-package com.example.domain
+package com.example.domain.base
 
 import io.reactivex.Flowable
 

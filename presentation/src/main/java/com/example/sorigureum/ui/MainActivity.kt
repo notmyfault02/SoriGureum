@@ -1,7 +1,8 @@
-package com.example.sorigureum
+package com.example.sorigureum.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.sorigureum.R
 
 class MainActivity : AppCompatActivity() {
 
