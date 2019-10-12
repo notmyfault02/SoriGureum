@@ -18,6 +18,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "CLIENT_ID",
+                project.properties["CLIENT_ID"] ?: "\"NOT_FOUND\""
     }
     buildTypes {
         release {
