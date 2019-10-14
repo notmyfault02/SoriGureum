@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.example.sorigureum.R
 import com.example.sorigureum.ui.ui.base.BaseActivity
 
-class LoginActivity : BaseActivity(), LoginContract.View {
+class LoginActivity: BaseActivity(), LoginContract.View {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

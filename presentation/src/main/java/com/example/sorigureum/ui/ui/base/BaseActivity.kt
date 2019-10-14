@@ -1,8 +1,8 @@
 package com.example.sorigureum.ui.ui.base
 
-import dagger.android.support.DaggerAppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
-abstract class BaseActivity: DaggerAppCompatActivity(), BaseContract.View {
+abstract class BaseActivity: AppCompatActivity(), BaseContract.View {
 
     private lateinit var presenter: BaseContract.Presenter<*>
 
