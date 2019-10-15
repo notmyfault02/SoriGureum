@@ -10,6 +10,8 @@
             android:roundIcon="@mipmap/ic_appicon_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".ui.ui.user.UserActivity">
+        </activity>
         <activity
                 android:name=".ui.ui.splash.SplashActivity"
                 android:theme="@style/SplashTheme">
