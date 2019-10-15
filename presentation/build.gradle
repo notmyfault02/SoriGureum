@@ -4,6 +4,12 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def keystorePropertiesFile = rootProject.file("local.properties")
+
+def keystoreProperties = new Properties()
+
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
 android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -19,8 +25,8 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "CLIENT_ID",
-                project.properties["CLIENT_ID"] ?: "\"NOT_FOUND\""
+        buildConfigField "String", "CLIENT_ID", getProps("CLIENT_ID")
+        buildConfigField "int", "USER_ID", getProps("USER_ID")
     }
     buildTypes {
         release {
