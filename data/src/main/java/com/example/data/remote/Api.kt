@@ -1,8 +1,8 @@
 package com.example.data.remote
 
+import com.example.data.BuildConfig
 import com.example.data.model.TrackData
 import com.example.data.model.UserData
-import com.example.domain.BuildConfig
 import io.reactivex.Flowable
 import retrofit2.Response
 import retrofit2.http.Field
