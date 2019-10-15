@@ -1,5 +1,6 @@
 package com.example.data.remote
 
+import com.example.data.model.TrackData
 import com.example.data.model.UserData
 import com.example.domain.BuildConfig
 import io.reactivex.Flowable
@@ -14,4 +15,7 @@ interface Api {
 
     @GET("/users/${BuildConfig.USER_ID}?client_id=${BuildConfig.CLIENT_ID}")
     fun getUser(): Flowable<UserData>
+
+    @GET("/tracks/{trackId}?client_id=${BuildConfig.CLIENT_ID}")
+    fun getTrack(): Flowable<TrackData>
 }
