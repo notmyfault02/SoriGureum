@@ -1,7 +1,6 @@
 # SoriGureum
 
 - Soundcloud Api를 이용한 음악 스트리밍 앱
-- https://github.com/notmyfault02/SoriGureum
 
 ## 🎧Feature
 
@@ -16,4 +15,5 @@
 - Android(Kotlin)
 - Clean Architecture
 - MVP Pattern
-- Test Code 작성
+- Test Code
+- DI
