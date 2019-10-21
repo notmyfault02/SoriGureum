@@ -20,6 +20,7 @@ class UserTest {
     fun getUser() {
         retrofitProvider.api.getUser().subscribe ( {
             println(it.id)
+            println(it)
             println(it.track_count)
         }, {
             print(it.message)
@@ -58,6 +59,16 @@ class UserTest {
             println(it.body())
         }, {
             println(it.localizedMessage)
+        })
+    }
+
+    @Test
+    fun getTrack() {
+        retrofitProvider.api.getTrack().subscribe( {
+            println(it)
+        }, {
+            println("error")
+            println(it.message)
         })
     }
 

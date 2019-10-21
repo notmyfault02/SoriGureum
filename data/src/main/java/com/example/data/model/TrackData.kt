@@ -16,7 +16,7 @@ data class TrackData(
     var purchase_url: String,
     val artwork_url: String,
     var description: String,
-    val label: String,
+    val label: UserData,
     var genre: String,
     var tag_list: List<String>,
     var label_id: Int,
@@ -45,5 +45,6 @@ data class TrackData(
     val original_format: String,
     val original_content_size: Int,
     val user_favorite: Boolean
+) {
 
-)
+}

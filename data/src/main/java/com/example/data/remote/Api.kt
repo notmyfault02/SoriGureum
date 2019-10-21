@@ -20,6 +20,6 @@ interface Api {
     @GET("/users/${BuildConfig.USER_ID}?client_id=${BuildConfig.CLIENT_ID}")
     fun getUser(): Flowable<UserData>
 
-    @GET("/tracks/{trackId}?client_id=${BuildConfig.CLIENT_ID}")
-    fun getTrack(): Flowable<TrackData>
+    @GET("/users/${BuildConfig.USER_ID}/favorites?client_id=${BuildConfig.CLIENT_ID}")
+    fun getTrack(): Flowable<MutableList<TrackData>>
 }
