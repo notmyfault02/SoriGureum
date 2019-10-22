@@ -18,7 +18,7 @@ data class TrackData(
     var description: String,
     val label: UserData,
     var genre: String,
-    var tag_list: List<String>,
+    var tag_list: String,
     var label_id: Int,
     var label_name: String,
     var release_day: Int,
