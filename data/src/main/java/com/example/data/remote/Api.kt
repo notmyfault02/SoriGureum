@@ -9,6 +9,7 @@ import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 interface Api {
 
@@ -21,5 +22,8 @@ interface Api {
     fun getUser(): Flowable<UserData>
 
     @GET("/users/${BuildConfig.USER_ID}/favorites?client_id=${BuildConfig.CLIENT_ID}")
-    fun getTrack(): Flowable<MutableList<TrackData>>
+    fun getFavorites(): Flowable<MutableList<TrackData>>
+
+    @GET("/tracks/{track_id}/stream?client_id=${BuildConfig.CLIENT_ID}}")
+    fun getStream(@Path ("client_id") clientId: Int): Flowable<TrackData>
 }

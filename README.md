@@ -14,6 +14,6 @@
 
 - Android(Kotlin)
 - Clean Architecture
-- MVP Pattern
+- MVVM Pattern
 - Test Code
 - DI

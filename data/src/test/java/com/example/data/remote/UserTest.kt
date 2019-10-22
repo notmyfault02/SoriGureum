@@ -64,12 +64,12 @@ class UserTest {
 
     @Test
     fun getTrack() {
-        retrofitProvider.api.getTrack().subscribe( {
-            println(it)
-        }, {
-            println("error")
-            println(it.message)
-        })
+//        retrofitProvider.api.getTrack().subscribe( {
+//            println(it)
+//        }, {
+//            println("error")
+//            println(it.message)
+//        })
     }
 
     @After
