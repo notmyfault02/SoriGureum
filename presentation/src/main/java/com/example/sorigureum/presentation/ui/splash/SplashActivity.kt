@@ -1,9 +1,9 @@
-package com.example.sorigureum.ui.ui.splash
+package com.example.sorigureum.presentation.ui.splash
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sorigureum.R
-import com.example.sorigureum.ui.ui.login.LoginActivity
+import com.example.sorigureum.presentation.ui.login.LoginActivity
 import org.jetbrains.anko.startActivity
 
 class SplashActivity : AppCompatActivity() {
