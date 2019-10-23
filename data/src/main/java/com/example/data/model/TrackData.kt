@@ -45,6 +45,4 @@ data class TrackData(
     val original_format: String,
     val original_content_size: Int,
     val user_favorite: Boolean
-) {
-
-}
+)

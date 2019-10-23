@@ -1,6 +1,5 @@
 package com.example.data.remote
 
-import com.example.data.BuildConfig
 import com.google.gson.JsonObject
 import org.junit.After
 import org.junit.Before
@@ -29,47 +28,23 @@ class UserTest {
     }
 
     @Test
-    fun connectTest() {
-        retrofitProvider.connect.connect(
-            "${BuildConfig.CLIENT_ID}",
-            "ddd",
-            "TOKEN",
-            "sss",
-            "sss"
-        ).subscribe( {
-            println("okay")
-            println(it.token)
+    fun getFavorites() {
+        retrofitProvider.api.getFavorites().subscribe( {
+            println(it)
         }, {
-            println("fail")
-            println(it.localizedMessage)
-        })
-    }
-
-    @Test
-    fun getToken() {
-        json = JsonObject().apply {
-            addProperty("client_id", "${BuildConfig.CLIENT_ID}")
-            addProperty("client_secret", "hello")
-            addProperty("redirect_uri", "")
-            addProperty("grant_type", "authrization_code")
-            addProperty("code", "")
-        }
-
-        retrofitProvider.api.getToken(json).subscribe( {
-            println(it.body())
-        }, {
-            println(it.localizedMessage)
+            println("error")
+            println(it.message)
         })
     }
 
     @Test
     fun getTrack() {
-//        retrofitProvider.api.getTrack().subscribe( {
-//            println(it)
-//        }, {
-//            println("error")
-//            println(it.message)
-//        })
+        retrofitProvider.api.getTrack(483235065).subscribe( {
+            println(it)
+        }, {
+            println("error")
+            println(it.message)
+        })
     }
 
     @After

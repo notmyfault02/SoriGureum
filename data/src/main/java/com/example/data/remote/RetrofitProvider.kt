@@ -5,7 +5,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitProvider {
-    private const val API_BASE_URL = "http://api.soundcloud.com"
+    private const val API_BASE_URL = "https://api.soundcloud.com"
     private const val CONNECT_URL = "https://soundcloud.com"
     var api: Api
     var connect: Connect
