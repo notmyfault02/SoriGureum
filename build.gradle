@@ -4,6 +4,7 @@ ext {
     retrofit = 'com.squareup.retrofit2:retrofit:2.5.0'
     retrofitGson = 'com.squareup.retrofit2:converter-gson:2.5.0'
     retrofitRxjava = 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    scalaConverter = 'com.squareup.retrofit2:converter-scalars:2.6.2'
 
     okhttp = 'com.squareup.okhttp3:okhttp:3.14.1'
     okhttpLogging = 'com.squareup.okhttp3:logging-interceptor:3.14.1'

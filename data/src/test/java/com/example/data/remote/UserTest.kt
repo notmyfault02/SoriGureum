@@ -1,5 +1,6 @@
 package com.example.data.remote
 
+import com.example.data.BuildConfig
 import com.google.gson.JsonObject
 import org.junit.After
 import org.junit.Before
@@ -29,7 +30,7 @@ class UserTest {
 
     @Test
     fun getFavorites() {
-        retrofitProvider.api.getFavorites().subscribe( {
+        retrofitProvider.api.getFavorites("${BuildConfig.CLIENT_ID}").subscribe( {
             println(it)
         }, {
             println("error")
@@ -44,6 +45,20 @@ class UserTest {
         }, {
             println("error")
             println(it.message)
+        })
+    }
+
+    @Test
+    fun getToken() {
+        val jsonObject = JsonObject().apply {
+            addProperty("client_id", BuildConfig.CLIENT_ID)
+        }
+
+
+        retrofitProvider.api.getToken(jsonObject).subscribe( {
+
+        }, {
+
         })
     }
 
