@@ -17,6 +17,22 @@ class UserTest {
     }
 
     @Test
+    fun connect() {
+        var body = JsonObject().apply {
+            addProperty("client_id", BuildConfig.CLIENT_ID)
+            addProperty("redirect_uri", BuildConfig.REDIRECT_URI)
+        }
+        retrofitProvider.api.connect(
+            body
+        ).subscribe( {
+            println(it.headers())
+        }, {
+            println("error")
+            println(it.localizedMessage)
+        })
+    }
+
+    @Test
     fun getUser() {
         retrofitProvider.api.getUser().subscribe ( {
             println(it.id)

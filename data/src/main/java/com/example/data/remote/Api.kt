@@ -1,6 +1,7 @@
 package com.example.data.remote
 
 import com.example.data.BuildConfig
+import com.example.data.model.LoginData
 import com.example.data.model.TrackData
 import com.example.data.model.UserData
 import com.google.gson.JsonObject
@@ -10,6 +11,10 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface Api {
+    @POST("/connect")
+    fun connect(
+        @Body body: JsonObject
+    ): Flowable<Response<LoginData?>>
 
     @POST("/oauth2/token")
     fun getToken(@Body body: JsonObject): Flowable<Response<Any>>

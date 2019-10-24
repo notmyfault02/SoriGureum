@@ -16,6 +16,7 @@ android {
 
         buildConfigField "String", "CLIENT_ID", getProps("CLIENT_ID")
         buildConfigField "int", "USER_ID", getProps("USER_ID")
+        buildConfigField "String", "REDIRECT_URI", getProps("REDIRECT_URI")
 
     }
 

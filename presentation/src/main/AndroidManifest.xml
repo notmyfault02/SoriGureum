@@ -12,6 +12,8 @@
             android:roundIcon="@mipmap/ic_appicon_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".presentation.ui.login.WebAuthActivity">
+        </activity>
         <activity android:name=".presentation.ui.user.UserActivity">
         </activity>
         <activity
